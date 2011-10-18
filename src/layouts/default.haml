@@ -1,0 +1,21 @@
+- @site_name                     = "Tiberias Construction Inc."
+- @title_delimiter               = " - "
+- @meta_description              = nil
+- @meta_keywords                 = nil
+- @google_site_verification_code = nil
+- @meta_title                    = current_page == '/index.html' ? @site_name : full_page_title
+
+!!!
+%html
+  %head
+    %meta{:"http-equiv" => "Content-Type", :content => "text/html; CHARSET=utf-8"}/
+    %title= @meta_title
+    %meta{:name => "description", :content => @meta_description}
+    %meta{:name => "keywords", :content => @meta_keywords}
+    = stylesheets :screen, :media => 'screen, projection'
+    = stylesheets :print, :media => 'print'
+    /[if lt IE 8]
+      = stylesheets :ie, :media => 'screen, projection'
+
+  %body{:id => @body_id, :class => @body_class}
+    = yield
