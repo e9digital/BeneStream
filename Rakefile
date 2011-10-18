@@ -1,5 +1,5 @@
 ssh_user    = "ubuntu@50.16.230.36"
-remote_root = "/srv/static/tiberiasconstructioninc.com"
+remote_root = "/srv/static/benestream.com"
 ssh_key     = `echo ~/.ec2/gsg-keypair.pem`.delete("\n")
 dropbox_dir = ""
 
